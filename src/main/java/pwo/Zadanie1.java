@@ -4,6 +4,7 @@ public class Zadanie1 {
 
     public static final int FROM = 0, TO = 100;
     public static final String FILE_NAME = "fibseq100.txt";
+    
 
     public static void main(String[] args) {
 
@@ -15,6 +16,19 @@ public class Zadanie1 {
         if (ok) {
             System.out.println("Wynik zapisany do pliku: "
                     + FILE_NAME);
+        } else {
+            System.out.println("Błąd");
+        }
+        
+        final String FILE_NAME = "lucasseq100.txt";
+
+        System.out.println("Lucas Sequence");
+
+
+        LucasGenerator lucasGenerator = new LucasGenerator();
+        ok = SequenceTools.writeToFile(lucasGenerator, FROM, TO, FILE_NAME);
+        if (ok) {
+            System.out.println("Wynik zapisany do pliku:"+ FILE_NAME);
         } else {
             System.out.println("Błąd");
         }
